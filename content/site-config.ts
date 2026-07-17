@@ -1,0 +1,30 @@
+export const siteConfig = {
+  name: "Harry's Happy Vending",
+  shortName: "Harry's Happy",
+  url: "https://www.harryshappy.com",
+  phone: "905-332-3925",
+  phoneHref: "tel:+19053323925",
+  email: "info@harryshappy.com",
+  hours: "Mon–Fri, 8:00 AM–5:00 PM",
+  foundedYear: 2006,
+  yearsInBusiness: new Date().getFullYear() - 2006,
+  locationsServed: "1,500+",
+  region: "the Golden Horseshoe",
+  tagline: "Customized Vending Solutions for Ontario Factories & Warehouses",
+  description:
+    "Family-owned since 2006, Harry's Happy Vending designs, installs, stocks, and maintains customized vending, coffee service, fresh food machines, AI coolers, and micro markets for factories, warehouses, and workplaces across the Greater Hamilton Area.",
+  social: {
+    linkedin: null as string | null,
+  },
+  serviceAreaCities: [
+    "Hamilton",
+    "Stoney Creek",
+    "Burlington",
+    "Milton",
+    "Oakville",
+    "Etobicoke",
+    "Mississauga",
+    "Brampton",
+  ],
+  priorityCities: ["Hamilton", "Burlington", "Milton", "Oakville", "Stoney Creek"],
+};
