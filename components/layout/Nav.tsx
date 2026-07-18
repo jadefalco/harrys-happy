@@ -28,7 +28,7 @@ export function Nav() {
           : "border-b border-transparent bg-transparent"
       )}
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6 lg:px-8">
         <Link href="/">
           <Logo />
         </Link>

@@ -9,7 +9,7 @@ export function Logo({ className }: { className?: string }) {
       width={282}
       height={182}
       priority
-      className={cn("h-11 w-auto shrink-0 lg:h-16", className)}
+      className={cn("h-16 w-auto shrink-0 lg:h-20", className)}
     />
   );
 }
