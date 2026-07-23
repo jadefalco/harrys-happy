@@ -104,7 +104,22 @@ export default async function ServiceDetailPage({
 
       <section className="py-20 sm:py-24">
         <Container className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr]">
-          <Reveal>
+          {service.featuredPhoto && (
+            <Reveal delay={0.05} className="order-1 lg:order-none lg:col-start-2 lg:row-start-1">
+              <div className="relative z-10 mb-8 aspect-[4/5] overflow-hidden rounded-[2rem] border border-hairline bg-white shadow-[0_20px_45px_-20px_rgba(11,42,99,0.2)] lg:-mb-19">
+                <Image
+                  src={service.featuredPhoto.src}
+                  alt={service.featuredPhoto.alt}
+                  fill
+                  loading="lazy"
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-contain p-6"
+                />
+              </div>
+            </Reveal>
+          )}
+
+          <Reveal className="order-2 lg:order-none lg:col-start-1 lg:row-start-1 lg:row-span-2">
             <h2 className="font-display text-2xl font-bold text-navy-950">What&rsquo;s included</h2>
             <ul className="mt-6 space-y-4">
               {service.benefits.map((benefit) => (
@@ -131,7 +146,7 @@ export default async function ServiceDetailPage({
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}>
+          <Reveal delay={0.1} className="order-3 lg:order-none lg:col-start-2 lg:row-start-2">
             <div className="rounded-3xl border border-hairline bg-white p-8">
               <h3 className="font-display text-lg font-bold text-navy-950">Ideal for</h3>
               <div className="mt-5 flex flex-wrap gap-2">

@@ -37,7 +37,7 @@ export const locationPages: LocationPage[] = [
     intro:
       "Burlington's warehouse and logistics operations along the QEW corridor move fast, and break rooms need to keep pace. We supply high-capacity drink and snack vending built for facilities where a large workforce takes breaks in concentrated windows.",
     body: [
-      "Warehouse floors in Burlington often run staggered shifts with dozens of staff on break at once — a standard-size cooler or snack machine gets wiped out in minutes and stays empty until the next scheduled visit. We spec equipment by real peak demand, not by whatever unit happened to be available in a warehouse of our own.",
+      "Warehouse floors in Burlington often run staggered shifts with dozens of staff on break at once — a standard-size cooler or snack machine gets wiped out in minutes and stays empty until the next scheduled visit. We spec equipment by real peak demand, not by whatever unit happened to be available sitting in our own inventory.",
       "Every Burlington installation begins with an on-site walkthrough where we look at your facility's layout, headcount, and break scheduling before recommending machines — and there's no cost to you for installation or setup.",
       "Beyond vending, many Burlington warehouse clients pair equipment with our coffee service program to cover early-morning receiving shifts, giving staff a reliable coffee option before the rest of the building is even open.",
     ],
@@ -139,7 +139,7 @@ export const locationPages: LocationPage[] = [
     intro:
       "Milton's warehouse and distribution operations along the 401 and 407 corridors move fast, and break rooms need to keep pace. We supply high-capacity drink and snack vending built for facilities where a large workforce takes breaks in concentrated windows.",
     body: [
-      "Warehouse floors in Milton often run staggered shifts with dozens of staff on break at once — a standard-size cooler or snack machine gets wiped out in minutes and stays empty until the next scheduled visit. We spec equipment by real peak demand, not by whatever unit happened to be available in a warehouse of our own.",
+      "Warehouse floors in Milton often run staggered shifts with dozens of staff on break at once — a standard-size cooler or snack machine gets wiped out in minutes and stays empty until the next scheduled visit. We spec equipment by real peak demand, not by whatever unit happened to be available sitting in our own inventory.",
       "Every Milton installation begins with an on-site walkthrough where we look at your facility's layout, headcount, and break scheduling before recommending machines — and there's no cost to you for installation or setup.",
       "Beyond vending, many Milton warehouse clients pair equipment with our coffee service program to cover early-morning receiving shifts, giving staff a reliable coffee option before the rest of the building is even open.",
     ],

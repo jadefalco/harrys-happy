@@ -23,20 +23,14 @@ export function CityList() {
 
         return (
           <li key={city.slug}>
-            {location ? (
-              <Link
-                href={`/locations/${location.slug}`}
-                className={cn(
-                  "flex items-center justify-between gap-3 rounded-2xl border border-hairline bg-white px-5 py-4 transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_30px_-15px_rgba(11,42,99,0.15)]"
-                )}
-              >
-                {content}
-              </Link>
-            ) : (
-              <div className="flex items-center justify-between gap-3 rounded-2xl border border-hairline bg-white px-5 py-4">
-                {content}
-              </div>
-            )}
+            <Link
+              href={location ? `/locations/${location.slug}` : "/contact"}
+              className={cn(
+                "flex items-center justify-between gap-3 rounded-2xl border border-hairline bg-white px-5 py-4 transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_30px_-15px_rgba(11,42,99,0.15)]"
+              )}
+            >
+              {content}
+            </Link>
           </li>
         );
       })}

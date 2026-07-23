@@ -1,8 +1,10 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { cities } from "@/content/cities";
+import { locationPages } from "@/content/locations";
 import { cn } from "@/lib/utils";
 
 export function ServiceAreasPreview() {
@@ -26,19 +28,26 @@ export function ServiceAreasPreview() {
           </Reveal>
 
           <Reveal delay={0.1} className="flex flex-wrap gap-3 lg:max-w-md lg:justify-end">
-            {sorted.map((city) => (
-              <span
-                key={city.slug}
-                className={cn(
-                  "rounded-full border px-4 py-2 text-sm font-semibold",
-                  city.priority
-                    ? "border-navy-900/15 bg-navy-900 text-cream"
-                    : "border-hairline bg-white text-navy-900/70"
-                )}
-              >
-                {city.name}
-              </span>
-            ))}
+            {sorted.map((city) => {
+              const location = locationPages.find((item) => item.city === city.name);
+              const href = location ? `/locations/${location.slug}` : "/contact";
+
+              return (
+                <Link
+                  key={city.slug}
+                  href={href}
+                  aria-label={`Vending services in ${city.name}`}
+                  className={cn(
+                    "rounded-full border px-4 py-2 text-sm font-semibold transition-colors",
+                    city.priority
+                      ? "border-navy-900/15 bg-navy-900 text-cream hover:bg-navy-950"
+                      : "border-hairline bg-white text-navy-900/70 hover:bg-navy-900/5 hover:text-navy-900"
+                  )}
+                >
+                  {city.name}
+                </Link>
+              );
+            })}
           </Reveal>
         </div>
       </Container>

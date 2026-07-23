@@ -3,6 +3,10 @@ export interface Service {
   name: string;
   shortDescription: string;
   heroImage: string;
+  /** Single photo shown beside the "What's included" content on the service
+   * detail page. Temporary/placeholder photos are fine here — swap the src
+   * for a higher-quality shot later without touching the layout. */
+  featuredPhoto?: { src: string; alt: string };
   /** Optional catalog/product photos illustrating equipment options for this
    * service — shown in an "Equipment options" strip on the service detail
    * page. Not claimed to be on-site photos, so stock/manufacturer shots are
@@ -24,6 +28,10 @@ export const services: Service[] = [
     shortDescription:
       "Full-size snack machines stocked with the brands your team already reaches for.",
     heroImage: "/images/service-snack.jpg",
+    featuredPhoto: {
+      src: "/images/machine-02.jpg",
+      alt: "Combination snack and cold drink vending machine installed by Harry's Happy Vending",
+    },
     icon: "snack",
     intro:
       "A snack machine that sits half-empty or jams on the same coil twice a week isn't a break-room amenity — it's a daily source of friction for your staff. Our snack vending programs are built around your shift patterns, your headcount, and what your specific crew actually buys, backed by a stocking schedule we hold ourselves to.",
@@ -46,6 +54,10 @@ export const services: Service[] = [
     shortDescription:
       "Cold beverage vending built for high-traffic breakrooms and shift-based facilities.",
     heroImage: "/images/service-drink.jpg",
+    featuredPhoto: {
+      src: "/images/machine-01.JPG",
+      alt: "Snack vending machine and beverage vending machine installed side by side at a Harry's Happy Vending client facility",
+    },
     icon: "drink",
     intro:
       "Cold drink demand spikes hard around shift changes and summer months — a machine that can't keep up leaves your crew without water, sports drinks, or their morning energy drink exactly when they need it most. We spec drink machines by capacity and refrigeration output specific to your facility, not by what happened to be available.",
@@ -68,6 +80,10 @@ export const services: Service[] = [
     shortDescription:
       "Refrigerated fresh food vending with real meals, not just wrapped snacks.",
     heroImage: "/images/service-food.jpg",
+    featuredPhoto: {
+      src: "/images/micro-market-02.jpg",
+      alt: "Open-concept micro market with refrigerated cases and snack shelving installed by Harry's Happy Vending",
+    },
     icon: "food",
     intro:
       "When a facility doesn't have a cafeteria or a nearby lunch option, fresh food vending becomes the difference between a proper meal and a bag of chips at a workstation. Our fresh food programs bring in sandwiches, salads, and hot-ready meals from regional suppliers, delivered and rotated on a schedule that respects shelf life.",
@@ -90,6 +106,10 @@ export const services: Service[] = [
     shortDescription:
       "Commercial-grade coffee equipment and supply programs for busy break rooms.",
     heroImage: "/images/service-coffee.jpg",
+    featuredPhoto: {
+      src: "/images/coffee-machine.jpg",
+      alt: "Flavia Creation 600 single-serve coffee machine offered through Harry's Happy Vending's coffee service",
+    },
     equipmentPhotos: [
       {
         src: "/images/coffee-machine3.webp",
@@ -130,6 +150,10 @@ export const services: Service[] = [
     shortDescription:
       "Open-concept self-checkout markets bringing grocery-style variety to your break room.",
     heroImage: "/images/service-market.jpg",
+    featuredPhoto: {
+      src: "/images/micro-market.png",
+      alt: "Rendering of a micro market layout with refrigerated cases, snack shelving, and a self-checkout kiosk",
+    },
     icon: "market",
     intro:
       "A micro market replaces a wall of vending machines with an open, walk-in space stocked like a small grocery store — fresh food, snacks, drinks, and grab-and-go items on real shelving, with self-checkout kiosks handling payment. For larger facilities with the floor space to support it, it's the single biggest upgrade to break room experience we offer.",
@@ -152,6 +176,10 @@ export const services: Service[] = [
     shortDescription:
       "Walk up, open the door, take what you need — no checkout, no line, no cash.",
     heroImage: "/images/service-cooler.jpg",
+    featuredPhoto: {
+      src: "/images/ai-smart-cooler.png",
+      alt: "AI-powered smart cooler stocked with snacks and beverages",
+    },
     icon: "cooler",
     intro:
       "AI smart coolers use computer-vision technology to identify exactly what's taken the moment the door opens and closes, and charge the customer's card automatically — no scanning, no cashier, no waiting in line. For fast-paced facilities where every minute of a break matters, it's the most modern convenience option we offer.",
