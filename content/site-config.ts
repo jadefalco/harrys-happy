@@ -8,7 +8,7 @@ export const siteConfig = {
   hours: "Mon–Fri, 8:00 AM–5:00 PM",
   foundedYear: 2006,
   yearsInBusiness: new Date().getFullYear() - 2006,
-  locationsServed: "1,500+",
+  locationsServed: "300+",
   region: "the Golden Horseshoe",
   tagline: "Customized Vending Solutions for Ontario Factories & Warehouses",
   description:

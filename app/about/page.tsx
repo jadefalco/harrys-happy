@@ -11,7 +11,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export const metadata: Metadata = buildMetadata({
   title: "About Us",
   description:
-    "Family-owned since 2006, Harry's Happy Vending has grown to serve 1,500+ locations across the Golden Horseshoe through long-term relationships, not one-off installs.",
+    "Family-owned since 2006, Harry's Happy Vending has grown to serve 300+ locations across the Golden Horseshoe through long-term relationships, not one-off installs.",
   path: "/about",
 });
 

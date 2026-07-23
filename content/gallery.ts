@@ -9,6 +9,19 @@ export interface GalleryImage {
 
 const SUPPORTED_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp"];
 
+// Assets that live in public/images but aren't on-site machine photos — the
+// site logo, and stock/catalog product shots that are shown elsewhere
+// (coffee equipment options on the coffee-service page) instead of being
+// presented here as "real equipment currently in service."
+const EXCLUDED_FROM_GALLERY = new Set([
+  "logo.webp",
+  "coffee-machine.jpg",
+  "coffee-machine2.jpg",
+  "coffee-machine3.webp",
+  "coffee-machine4.webp",
+  "micro-market.png",
+]);
+
 const knownImages: Record<string, { alt: string; caption: string }> = {
   "machine-01.JPG": {
     alt: "Snack vending machine and beverage vending machine installed side by side at a Harry's Happy Vending client facility",
@@ -30,13 +43,9 @@ const knownImages: Record<string, { alt: string; caption: string }> = {
     alt: "Frozen meal, Pepsi beverage, and snack vending machines installed together in a Harry's Happy Vending client facility",
     caption: "Multi-Machine Lineup",
   },
-  "coffee-machine.jpg": {
-    alt: "Single-serve Flavia coffee brewing machine offered through Harry's Happy Vending's coffee service program",
-    caption: "Single-Serve Coffee",
-  },
-  "coffee-machine2.jpg": {
-    alt: "Bean-to-cup commercial coffee machine offered through Harry's Happy Vending's coffee service program",
-    caption: "Bean-to-Cup Coffee",
+  "micro-market-02.jpg": {
+    alt: "Open-concept micro market with self-checkout kiosks and refrigerated cases installed by Harry's Happy Vending",
+    caption: "Micro Market",
   },
 };
 
@@ -58,6 +67,7 @@ export function getMachineGallery(): GalleryImage[] {
 
   return files
     .filter((file) => SUPPORTED_EXTENSIONS.includes(path.extname(file).toLowerCase()))
+    .filter((file) => !EXCLUDED_FROM_GALLERY.has(file))
     .sort((a, b) => a.localeCompare(b))
     .map((file) => {
       const known = knownImages[file];

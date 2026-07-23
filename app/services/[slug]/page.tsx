@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { services, getServiceBySlug } from "@/content/services";
 import { buildMetadata } from "@/lib/metadata";
@@ -8,6 +9,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GridPattern } from "@/components/ui/GridPattern";
 import { ServiceIcon } from "@/components/domain/ServiceIcon";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -166,6 +168,34 @@ export default async function ServiceDetailPage({
           </Reveal>
         </Container>
       </section>
+
+      {service.equipmentPhotos && service.equipmentPhotos.length > 0 && (
+        <section className="border-t border-hairline bg-paper py-20 sm:py-24">
+          <Container>
+            <SectionHeading
+              eyebrow="Equipment Options"
+              title={`${service.name} equipment we install`}
+              description="A look at the type of equipment we spec for this service — the exact model comes down to your break room's traffic and footprint."
+            />
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {service.equipmentPhotos.map((photo) => (
+                <Reveal key={photo.src}>
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-hairline bg-white shadow-[0_1px_2px_rgba(20,23,28,0.04)] transition-shadow duration-300 hover:shadow-[0_20px_40px_-15px_rgba(11,42,99,0.15)]">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      loading="lazy"
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-contain p-6"
+                    />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
 
       <FinalCTA />
     </>

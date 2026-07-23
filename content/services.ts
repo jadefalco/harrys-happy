@@ -3,6 +3,11 @@ export interface Service {
   name: string;
   shortDescription: string;
   heroImage: string;
+  /** Optional catalog/product photos illustrating equipment options for this
+   * service — shown in an "Equipment options" strip on the service detail
+   * page. Not claimed to be on-site photos, so stock/manufacturer shots are
+   * fine here (unlike the homepage "Our Machines" gallery). */
+  equipmentPhotos?: { src: string; alt: string }[];
   icon: "snack" | "drink" | "food" | "coffee" | "market" | "cooler";
   intro: string;
   benefits: string[];
@@ -85,6 +90,24 @@ export const services: Service[] = [
     shortDescription:
       "Commercial-grade coffee equipment and supply programs for busy break rooms.",
     heroImage: "/images/service-coffee.jpg",
+    equipmentPhotos: [
+      {
+        src: "/images/coffee-machine3.webp",
+        alt: "Keurig commercial single-serve coffee brewer, one of the coffee equipment options Harry's Happy Vending installs",
+      },
+      {
+        src: "/images/coffee-machine4.webp",
+        alt: "Necta touchscreen bean-to-cup coffee machine, one of the coffee equipment options Harry's Happy Vending installs",
+      },
+      {
+        src: "/images/coffee-machine.jpg",
+        alt: "Flavia Creation 600 single-serve pack coffee machine, one of the coffee equipment options Harry's Happy Vending installs",
+      },
+      {
+        src: "/images/coffee-machine2.jpg",
+        alt: "Automatic bean-to-cup coffee machine, one of the coffee equipment options Harry's Happy Vending installs",
+      },
+    ],
     icon: "coffee",
     intro:
       "Coffee is the first thing most employees interact with on shift, and a weak or broken coffee program shows up in morale fast. We supply and maintain commercial single-serve and bean-to-cup equipment, matched to your break room's traffic, along with the ongoing supply of coffee, creamers, teas, and hot chocolate to keep it running.",
