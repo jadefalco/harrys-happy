@@ -113,6 +113,40 @@ export const locationPages: LocationPage[] = [
     metaDescription:
       "Snack vending for Hamilton factories, warehouses and offices, with a product mix built around your workforce and cashless payment on every machine. 24-hour service response.",
   },
+  {
+    slug: "factory-vending-stoney-creek",
+    title: "Factory Vending in Stoney Creek",
+    city: "Stoney Creek",
+    canonicalServiceSlug: "snack-vending",
+    heroImage: "/images/location-stoney-creek-factory.jpg",
+    intro:
+      "Stoney Creek's manufacturing base runs on shift changeovers, not a nine-to-five clock. From food processing and precision machining to assembly plants along the QEW corridor, we've built vending programs around production schedules that don't pause for a lunch bell.",
+    body: [
+      "A factory floor with rotating shifts needs a break room that's stocked and working at 6 a.m., 2 p.m., and midnight alike. We size snack and drink equipment to your headcount and shift pattern, then hold ourselves to a stocking schedule that matches your actual consumption rather than a fixed generic route through the city.",
+      "We currently service manufacturing facilities throughout Stoney Creek and the surrounding industrial areas, and every installation starts with a free, no-obligation site assessment — we look at your space, your shift structure, and your current break room setup before recommending equipment.",
+      "If your factory currently has vending machines that jam, run out of stock, or simply don't match what your crew wants, we'll assess what's there and tell you plainly whether it needs replacing or just a better-managed stocking plan.",
+    ],
+    metaTitle: "Factory Vending Machines in Stoney Creek, Ontario",
+    metaDescription:
+      "Reliable snack and drink vending for Stoney Creek manufacturing plants and factories. Equipment sized to your shift pattern, with fast response and no installation cost.",
+  },
+  {
+    slug: "warehouse-vending-milton",
+    title: "Warehouse Vending in Milton",
+    city: "Milton",
+    canonicalServiceSlug: "drink-vending",
+    heroImage: "/images/location-milton-warehouse.jpg",
+    intro:
+      "Milton's warehouse and distribution operations along the 401 and 407 corridors move fast, and break rooms need to keep pace. We supply high-capacity drink and snack vending built for facilities where a large workforce takes breaks in concentrated windows.",
+    body: [
+      "Warehouse floors in Milton often run staggered shifts with dozens of staff on break at once — a standard-size cooler or snack machine gets wiped out in minutes and stays empty until the next scheduled visit. We spec equipment by real peak demand, not by whatever unit happened to be available in a warehouse of our own.",
+      "Every Milton installation begins with an on-site walkthrough where we look at your facility's layout, headcount, and break scheduling before recommending machines — and there's no cost to you for installation or setup.",
+      "Beyond vending, many Milton warehouse clients pair equipment with our coffee service program to cover early-morning receiving shifts, giving staff a reliable coffee option before the rest of the building is even open.",
+    ],
+    metaTitle: "Warehouse Vending Machines in Milton, Ontario",
+    metaDescription:
+      "High-capacity vending machines for Milton warehouses and distribution facilities. Equipment sized to your shift pattern and peak break-room demand, with fast repairs when you need them.",
+  },
 ];
 
 export function getLocationBySlug(slug: string) {

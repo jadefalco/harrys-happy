@@ -297,7 +297,7 @@ export function GalleryLightbox({ images }: { images: GalleryImage[] }) {
           role="dialog"
           aria-modal="true"
           aria-label={images[openIndex].caption}
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-navy-950/92 p-4 backdrop-blur-md sm:p-8"
+          className="fixed inset-0 z-60 flex items-center justify-center bg-navy-950/92 p-4 backdrop-blur-md sm:p-8"
           onClick={close}
         >
           <span className="absolute left-5 top-5 rounded-full border border-cream/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-cream/80 sm:left-6 sm:top-6">

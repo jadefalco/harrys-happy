@@ -4,7 +4,7 @@ import { siteConfig } from "@/content/site-config";
 
 const stats = [
   { value: `${siteConfig.foundedYear}`, label: "Serving Ontario Since" },
-  { value: <CountUp to={130} suffix="+" />, label: "Vending Machines" },
+  { value: <CountUp to={300} suffix="+" />, label: "Vending Machines" },
   { value: "24-Hr", label: "Service Response" },
   { value: "100%", label: "Customized Equipment" },
   { value: "$0", label: "Installation Costs" },
