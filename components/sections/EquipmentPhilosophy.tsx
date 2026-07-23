@@ -35,6 +35,7 @@ export function EquipmentPhilosophy() {
               title="No square pegs in round holes."
               description="This is the single biggest difference between us and the rest of the industry — and it shapes every installation we do."
               dark
+              titleClassName="lg:text-7xl"
             />
             <p className="mt-6 max-w-md text-cream/70 leading-relaxed">
               A break room with 300 people on three shifts and a 12-person satellite office

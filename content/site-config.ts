@@ -10,9 +10,9 @@ export const siteConfig = {
   yearsInBusiness: new Date().getFullYear() - 2006,
   locationsServed: "300+",
   region: "the Golden Horseshoe",
-  tagline: "Customized Vending Solutions for Ontario Factories & Warehouses",
+  tagline: "Reliable Vending for Ontario Workplaces",
   description:
-    "Family-owned since 2006, Harry's Happy Vending designs, installs, stocks, and maintains customized vending, coffee service, fresh food machines, AI coolers, and micro markets for factories, warehouses, and workplaces across the Greater Hamilton Area.",
+    "Family-owned since 2006, Harry's Happy Vending helps factories, warehouses, and workplaces create better break rooms with customized vending, coffee service, fresh food, and micro markets—backed by dependable local service.",
   social: {
     linkedin: null as string | null,
   },

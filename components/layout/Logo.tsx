@@ -6,10 +6,10 @@ export function Logo({ className }: { className?: string }) {
     <Image
       src="/images/logo.webp"
       alt="Harry's Happy Vending"
-      width={282}
-      height={182}
+      width={278}
+      height={177}
       priority
-      className={cn("h-16 w-auto shrink-0 lg:h-20", className)}
+      className={cn("h-20 w-auto shrink-0 lg:h-24", className)}
     />
   );
 }

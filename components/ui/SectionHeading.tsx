@@ -1,12 +1,14 @@
+import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
   eyebrow?: string;
-  title: string;
+  title: ReactNode;
   description?: string;
   align?: "left" | "center";
   dark?: boolean;
   className?: string;
+  titleClassName?: string;
 }
 
 export function SectionHeading({
@@ -16,6 +18,7 @@ export function SectionHeading({
   align = "left",
   dark = false,
   className,
+  titleClassName,
 }: SectionHeadingProps) {
   return (
     <div
@@ -38,7 +41,8 @@ export function SectionHeading({
       <h2
         className={cn(
           "font-display text-balance text-3xl font-black leading-[1.1] sm:text-4xl lg:text-5xl",
-          dark ? "text-cream" : "text-navy-950"
+          dark ? "text-cream" : "text-navy-950",
+          titleClassName
         )}
       >
         {title}
