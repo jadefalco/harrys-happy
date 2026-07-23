@@ -21,7 +21,7 @@ export function FAQSection({ withSchema = false }: { withSchema?: boolean }) {
           align="center"
           className="mx-auto"
         />
-        <Reveal className="mt-12">
+        <Reveal className="mx-auto mt-12 max-w-3xl">
           <Accordion items={faqItems} />
         </Reveal>
       </Container>
